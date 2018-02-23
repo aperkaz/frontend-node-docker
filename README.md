@@ -2,7 +2,7 @@
 
 🐋 Repository showcasing the flow developing Front-end projects using Node inside Docker.
 
-Build using [`create-react-app`](https://github.com/facebook/create-react-app) for bootstraping.
+Build using [`create-react-app`](https://github.com/facebook/create-react-app) for bootstraping. Source [article](https://www.peterbe.com/plog/how-to-create-react-app-with-docker).
 
 ## Advantages
 
@@ -25,6 +25,10 @@ Steps to follow:
 3. Build the container `docker image build -t react:app .`
 (Optional) `-t` allow to customize `REPOSITORY:TAG`.  
 4. (Optional) check the build result with bash `docker container run -it react:app bash`
+5. Run app: `docker container run -it -v $(pwd):/app react:app`
+5. Build app: `docker container run -it -v $(pwd):/app react:app build`
+6. Run tests: `docker container run -it -v $(pwd):/app react:app test`
+
 
 *Note*: files modified and created from the container may generate permission issues. Explanation and solution [here](https://denibertovic.com/posts/handling-permissions-with-docker-volumes/). Alternatively folder permission can be modified with:
 ```
