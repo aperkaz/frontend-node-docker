@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-scripts": "1.1.1"
   },
   "scripts": {
@@ -15,6 +15,11 @@
     "docker:build": "docker container run -it -v $(pwd):/app react:app build && sudo chmod -R 777 ./build",
     "test": "react-scripts test --env=jsdom",
     "docker:test": "docker container run -it -v $(pwd):/app react:app test",
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.4.11",
+    "babel-core": "^6.26.3"
   }
 }
