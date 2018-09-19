@@ -8,6 +8,7 @@
     "react-scripts": "1.1.1"
   },
   "scripts": {
+    "docker:clean": "docker container prune",
     "start": "react-scripts start",
     "docker:start": "docker container run -it -v $(pwd):/app react:app",
     "build": "react-scripts build",

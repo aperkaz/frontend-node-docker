@@ -29,7 +29,12 @@ Steps to follow:
 5. Build app: `docker container run -it -v $(pwd):/app react:app build`
 6. Run tests: `docker container run -it -v $(pwd):/app react:app test`
 
-You can name the containers with the `--name` flag, and the ssh into them:
+*Note*: remove paused containers: `npm run docker:clean`
+```
+docker container prune
+```
+
+*Note*: You can name the containers with the `--name` flag, and the ssh into them:
 ```
 docker container run -it -v $(pwd):/app --name containerToDebug react:app
 
