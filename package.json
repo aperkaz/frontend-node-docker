@@ -9,8 +9,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "docker:start": "docker container run -it -v $(pwd):/app react:app",
     "build": "react-scripts build",
+    "docker:build": "docker container run -it -v $(pwd):/app react:app build && sudo chmod -R 777 ./build",
     "test": "react-scripts test --env=jsdom",
+    "docker:test": "docker container run -it -v $(pwd):/app react:app test",
     "eject": "react-scripts eject"
   }
 }

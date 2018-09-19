@@ -29,6 +29,12 @@ Steps to follow:
 5. Build app: `docker container run -it -v $(pwd):/app react:app build`
 6. Run tests: `docker container run -it -v $(pwd):/app react:app test`
 
+You can name the containers with the `--name` flag, and the ssh into them:
+```
+docker container run -it -v $(pwd):/app --name containerToDebug react:app
+
+docker exec -it containerToDebug bash
+```
 
 *Note*: files modified and created from the container may generate permission issues. Explanation and solution [here](https://denibertovic.com/posts/handling-permissions-with-docker-volumes/). Alternatively folder permission can be modified with:
 ```
