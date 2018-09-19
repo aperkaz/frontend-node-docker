@@ -13,6 +13,9 @@ case $1 in
   test)
     npm test $@
     ;;
+  storybook)
+    npm run storybook
+    ;;
   *)
     exec "$@"
     ;;

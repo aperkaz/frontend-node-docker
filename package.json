@@ -16,6 +16,7 @@
     "test": "react-scripts test --env=jsdom",
     "docker:test": "docker container run -it -v $(pwd):/app react:app test",
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "docker:storybook": "docker container run -it -v $(pwd):/app react:app storybook",
     "eject": "react-scripts eject"
   },
   "devDependencies": {

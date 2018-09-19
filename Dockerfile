@@ -10,7 +10,9 @@ RUN npm install
 WORKDIR /app
 COPY . /app
 
-EXPOSE 3000
+EXPOSE 3000  # dev port
+EXPOSE 35729 # hot-reload port
+EXPOSE 9001  # Storybook port
 
 
 ENTRYPOINT ["/bin/bash", "/app/docker-run.sh"]
